@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100" height="100">
+  <defs>
+    <radialGradient id="flame-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFDD00" />
+      <stop offset="40%" stop-color="#FF9500" />
+      <stop offset="70%" stop-color="#FF5E3A" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </radialGradient>
+  </defs>
+  <g transform="translate(256, 256)">
+    <!-- Phoenix body -->
+    <path d="M0,-180 C-20,-160 -40,-120 -30,-80 C-50,-100 -80,-120 -100,-100 C-80,-80 -60,-60 -50,-40 C-70,-50 -90,-40 -100,-20 C-80,-20 -60,-10 -40,0 C-60,20 -80,40 -70,60 C-50,40 -30,20 -10,30 C-20,50 -30,70 -20,90 C0,70 20,50 30,30 C40,50 50,70 40,90 C60,70 80,50 70,30 C90,40 110,50 100,20 C80,10 60,0 40,0 C60,-10 80,-20 70,-40 C50,-30 30,-20 20,-40 C40,-60 60,-80 50,-100 C30,-80 10,-60 0,-80 C-10,-60 -20,-40 -10,-20 C0,-40 10,-60 0,-80 C10,-100 20,-120 10,-140 C0,-120 -10,-100 -20,-120 C-10,-140 0,-160 0,-180 Z" 
+          fill="url(#flame-gradient)" stroke="#FF3B30" stroke-width="2" />
+    
+    <!-- Phoenix wings -->
+    <path d="M-10,-60 C-40,-80 -70,-70 -90,-40 C-70,-40 -50,-30 -30,-10 C-50,0 -70,20 -60,40 C-40,20 -20,0 -10,-20 Z" 
+          fill="#FF9500" stroke="#FF3B30" stroke-width="2" />
+    <path d="M10,-60 C40,-80 70,-70 90,-40 C70,-40 50,-30 30,-10 C50,0 70,20 60,40 C40,20 20,0 10,-20 Z" 
+          fill="#FF9500" stroke="#FF3B30" stroke-width="2" transform="scale(-1, 1)" />
+    
+    <!-- Phoenix tail -->
+    <path d="M-30,40 C-40,60 -50,80 -30,100 C-10,80 0,60 10,40 C0,50 -10,60 -30,40 Z" 
+          fill="#FF5E3A" stroke="#FF3B30" stroke-width="2" />
+    <path d="M30,40 C40,60 50,80 30,100 C10,80 0,60 -10,40 C0,50 10,60 30,40 Z" 
+          fill="#FF5E3A" stroke="#FF3B30" stroke-width="2" />
+    
+    <!-- Phoenix head -->
+    <circle cx="0" cy="-140" r="15" fill="#FFDD00" stroke="#FF3B30" stroke-width="2" />
+    <path d="M-8,-145 C-5,-148 0,-150 5,-148 C10,-145 12,-140 10,-135 C5,-138 0,-140 -5,-138 C-10,-135 -12,-130 -10,-125 C-15,-130 -15,-140 -8,-145 Z" 
+          fill="#FF2D55" stroke="#FF3B30" stroke-width="2" />
+  </g>
+</svg>

@@ -1,0 +1,505 @@
+/**
+ * Phoenix AI Companion Styles
+ * 
+ * Styles for the Phoenix AI Companion interface, including chat window,
+ * messages, animations, and notifications.
+ */
+
+/* Container */
+.phoenix-companion-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
+  --phoenix-primary: #FF5E3A;
+  --phoenix-secondary: #FF9500;
+  --phoenix-tertiary: #FFCC00;
+  --phoenix-dark: #333333;
+  --phoenix-light: #F8F8F8;
+  --phoenix-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  --phoenix-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Toggle Button */
+.phoenix-companion-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--phoenix-primary), var(--phoenix-secondary));
+  box-shadow: var(--phoenix-shadow);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--phoenix-transition);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.phoenix-companion-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.phoenix-avatar-mini {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--phoenix-transition);
+}
+
+.phoenix-avatar-mini img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Chat Window */
+.phoenix-companion-chat {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: var(--phoenix-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.9);
+  transform-origin: bottom right;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--phoenix-transition);
+}
+
+.phoenix-companion-chat.active {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Chat Header */
+.phoenix-chat-header {
+  padding: 15px;
+  background: linear-gradient(135deg, var(--phoenix-primary), var(--phoenix-secondary));
+  color: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.phoenix-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.phoenix-avatar img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.phoenix-info {
+  flex: 1;
+}
+
+.phoenix-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.phoenix-status {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.phoenix-close-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--phoenix-transition);
+}
+
+.phoenix-close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Chat Messages */
+.phoenix-chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: var(--phoenix-light);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phoenix-message {
+  max-width: 80%;
+  padding: 12px 15px;
+  border-radius: 18px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--phoenix-transition);
+}
+
+.phoenix-message-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.phoenix-user-message {
+  align-self: flex-end;
+  background-color: var(--phoenix-primary);
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.phoenix-phoenix-message {
+  align-self: flex-start;
+  background-color: white;
+  color: var(--phoenix-dark);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 5px;
+}
+
+.phoenix-message-content {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.phoenix-message-time {
+  font-size: 10px;
+  opacity: 0.7;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.phoenix-user-message .phoenix-message-time {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Chat Input */
+.phoenix-chat-input {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.phoenix-chat-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  transition: var(--phoenix-transition);
+}
+
+.phoenix-chat-input input:focus {
+  border-color: var(--phoenix-primary);
+  box-shadow: 0 0 0 2px rgba(255, 94, 58, 0.2);
+}
+
+.phoenix-send-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--phoenix-primary);
+  color: white;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--phoenix-transition);
+}
+
+.phoenix-send-button:hover {
+  background-color: var(--phoenix-secondary);
+  transform: scale(1.05);
+}
+
+/* Notifications */
+.phoenix-notification {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: var(--phoenix-shadow);
+  z-index: 999;
+  overflow: hidden;
+  transform: translateX(120%);
+  opacity: 0;
+  transition: var(--phoenix-transition);
+}
+
+.phoenix-notification-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.phoenix-notification-closing {
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+.phoenix-notification-header {
+  padding: 12px 15px;
+  background: linear-gradient(135deg, var(--phoenix-primary), var(--phoenix-secondary));
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.phoenix-notification-title {
+  flex: 1;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.phoenix-notification-close {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--phoenix-transition);
+}
+
+.phoenix-notification-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.phoenix-notification-body {
+  padding: 15px;
+  font-size: 14px;
+  color: var(--phoenix-dark);
+}
+
+.phoenix-notification-actions {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.phoenix-notification-action {
+  background-color: var(--phoenix-primary);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--phoenix-transition);
+}
+
+.phoenix-notification-action:hover {
+  background-color: var(--phoenix-secondary);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.phoenix-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .phoenix-companion-chat {
+    width: calc(100% - 40px);
+    height: 60vh;
+    bottom: 80px;
+    right: 20px;
+    left: 20px;
+  }
+  
+  .phoenix-notification {
+    width: calc(100% - 40px);
+    left: 20px;
+    right: 20px;
+  }
+}
+
+/* Accessibility */
+.phoenix-companion-container:focus-within {
+  outline: 2px solid var(--phoenix-primary);
+}
+
+.phoenix-companion-toggle:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.phoenix-send-button:focus,
+.phoenix-close-button:focus,
+.phoenix-notification-action:focus,
+.phoenix-notification-close:focus {
+  outline: 2px solid var(--phoenix-primary);
+  outline-offset: 2px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .phoenix-companion-chat {
+    background-color: #222;
+  }
+  
+  .phoenix-chat-messages {
+    background-color: #333;
+  }
+  
+  .phoenix-phoenix-message {
+    background-color: #444;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .phoenix-chat-input {
+    background-color: #222;
+  }
+  
+  .phoenix-chat-input input {
+    background-color: #333;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .phoenix-notification {
+    background-color: #222;
+  }
+  
+  .phoenix-notification-body {
+    color: white;
+  }
+}
+
+/* Animation for Phoenix Avatar */
+.phoenix-avatar img,
+.phoenix-avatar-mini img {
+  animation: phoenix-glow 3s infinite alternate;
+}
+
+@keyframes phoenix-glow {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(255, 94, 58, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 8px rgba(255, 149, 0, 0.8));
+  }
+}
+
+/* Evolution Stage Indicators */
+.phoenix-companion-container[data-stage="2"] .phoenix-avatar,
+.phoenix-companion-container[data-stage="2"] .phoenix-avatar-mini {
+  border: 2px solid var(--phoenix-secondary);
+}
+
+.phoenix-companion-container[data-stage="3"] .phoenix-avatar,
+.phoenix-companion-container[data-stage="3"] .phoenix-avatar-mini {
+  border: 2px solid var(--phoenix-tertiary);
+}
+
+.phoenix-companion-container[data-stage="4"] .phoenix-avatar,
+.phoenix-companion-container[data-stage="4"] .phoenix-avatar-mini {
+  border: 2px solid #00BFFF;
+}
+
+.phoenix-companion-container[data-stage="5"] .phoenix-avatar,
+.phoenix-companion-container[data-stage="5"] .phoenix-avatar-mini {
+  border: 2px solid #9C27B0;
+}
+
+/* Typing Indicator */
+.phoenix-typing {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 18px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.phoenix-typing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--phoenix-primary);
+  margin: 0 2px;
+  opacity: 0.6;
+}
+
+.phoenix-typing-dot:nth-child(1) {
+  animation: typing 1s infinite 0s;
+}
+
+.phoenix-typing-dot:nth-child(2) {
+  animation: typing 1s infinite 0.2s;
+}
+
+.phoenix-typing-dot:nth-child(3) {
+  animation: typing 1s infinite 0.4s;
+}
+
+@keyframes typing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

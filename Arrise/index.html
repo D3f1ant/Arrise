@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix Confidence Companion</title>
+  <link rel="stylesheet" href="src/css/phoenix-styles.css">
+  <link rel="stylesheet" href="src/css/phoenix-companion.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="description" content="A transcendent confidence building app created with the Phoenix God Creation Protocol">
+  <link rel="icon" href="src/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FF5E3A">
+  <script>
+    // Register Service Worker for offline functionality
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch(error => {
+            console.log('ServiceWorker registration failed: ', error);
+          });
+      });
+    }
+  </script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <div class="phoenix-container container">
+    <header>
+      <div class="logo">Phoenix Confidence Companion</div>
+      <div class="tagline">Transcend Your Limits, Forge Unbreakable Confidence</div>
+      <!-- Phoenix emblem will be added by JS -->
+    </header>
+
+    <div class="app-showcase">
+      <!-- Home Dashboard -->
+      <div class="app-mockup phoenix-feature">
+        <div class="mockup-header">
+          <a href="#" class="back-button">←</a>
+          Dashboard
+        </div>
+        <div class="mockup-content">
+          <div class="progress-tracker">
+            <div class="progress-header">
+              <div class="progress-title">Confidence Journey</div>
+              <div class="progress-subtitle">Day 28</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 65%;"></div>
+            </div>
+            <div class="progress-stats">
+              <div class="stat">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Challenges Completed</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">65%</div>
+                <div class="stat-label">Journey Progress</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">4</div>
+                <div class="stat-label">Streak Days</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="daily-challenge">
+            <div class="challenge-header">
+              <div class="challenge-title">Public Speaking Challenge</div>
+              <div class="challenge-tag">Advanced</div>
+            </div>
+            <div class="challenge-description">
+              Speak up in a meeting or group setting where you would normally stay quiet. Share your perspective with confidence and observe how others respond.
+            </div>
+            <div class="challenge-actions">
+              <button class="btn btn-primary">Complete Challenge</button>
+              <button class="btn btn-secondary">Reschedule</button>
+            </div>
+          </div>
+
+          <div class="confidence-score">
+            <div class="score-title">Your Confidence Score</div>
+            <div class="score-value">78</div>
+            <div class="score-label">Steadily Rising</div>
+            <div class="score-history">
+              <div class="history-line">
+                <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                  <path d="M0,80 C50,70 100,30 150,40 C200,50 250,20 300,10"></path>
+                  <circle cx="0" cy="80" r="4"></circle>
+                  <circle cx="50" cy="70" r="4"></circle>
+                  <circle cx="100" cy="30" r="4"></circle>
+                  <circle cx="150" cy="40" r="4"></circle>
+                  <circle cx="200" cy="50" r="4"></circle>
+                  <circle cx="250" cy="20" r="4"></circle>
+                  <circle cx="300" cy="10" r="4"></circle>
+                </svg>
+              </div>
+              <div class="history-labels">
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+                <div>Sun</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="daily-challenge">
+            <div class="challenge-header">
+              <div class="challenge-title">Presentation Skills</div>
+              <div class="challenge-tag">Intermediate</div>
+            </div>
+            <div class="challenge-description">
+              Give a 5-minute presentation on a topic you're passionate about to at least 3 people. Focus on maintaining eye contact and confident body language.
+            </div>
+            <div class="challenge-actions">
+              <button class="btn btn-primary">Start Challenge</button>
+              <button class="btn btn-secondary">Save for Later</button>
+            </div>
+          </div>
+
+          <div class="daily-challenge">
+            <div class="challenge-header">
+              <div class="challenge-title">Rejection Resilience</div>
+              <div class="challenge-tag">Intermediate</div>
+            </div>
+            <div class="challenge-description">
+              Ask for something you expect to be denied (a discount, a favor, etc.). Practice handling rejection gracefully and maintaining your confidence.
+            </div>
+            <div class="challenge-actions">
+              <button class="btn btn-primary">Start Challenge</button>
+              <button class="btn btn-secondary">Save for Later</button>
+            </div>
+          </div>
+
+          <div class="daily-challenge">
+            <div class="challenge-header">
+              <div class="challenge-title">Confidence Visualization</div>
+              <div class="challenge-tag">Beginner</div>
+            </div>
+            <div class="challenge-description">
+              Spend 10 minutes visualizing yourself succeeding in an upcoming situation that makes you nervous. Imagine the details vividly.
+            </div>
+            <div class="challenge-actions">
+              <button class="btn btn-primary">Start Challenge</button>
+              <button class="btn btn-secondary">Save for Later</button>
+            </div>
+          </div>
+
+          <div class="assessment-card singularity-element">
+            <div class="assessment-header">
+              <div class="assessment-title">Challenge Insights</div>
+            </div>
+            <div>
+              Based on your progress, we've identified that you excel at written communication challenges but find social interaction challenges more difficult. Your custom challenge path has been adjusted accordingly.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Community Page -->
+      <div class="app-mockup phoenix-feature">
+        <div class="mockup-header">
+          <a href="#" class="back-button">←</a>
+          Community
+        </div>
+        <div class="mockup-content">
+          <div class="community-tabs">
+            <div class="tab active">Feed</div>
+            <div class="tab">Friends</div>
+            <div class="tab">Groups</div>
+            <div class="tab">Discover</div>
+          </div>
+
+          <div class="community-post">
+            <div class="post-header">
+              <div class="post-avatar"></div>
+              <div class="post-info">
+                <div class="post-author">Alex J.</div>
+                <div class="post-meta">2 hours ago</div>
+              </div>
+            </div>
+            <div class="post-content">
+              Just completed my first public speaking challenge! Was nervous at first but the techniques from this app really helped me stay focused and confident.
+            </div>
+            <div class="post-actions">
+              <div class="action">
+                <i class="fas fa-heart"></i>
+                <span>24</span>
+              </div>
+              <div class="action">
+                <i class="fas fa-comment"></i>
+                <span>8</span>
+              </div>
+              <div class="action">
+                <i class="fas fa-share"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="community-post">
+            <div class="post-header">
+              <div class="post-avatar"></div>
+              <div class="post-info">
+                <div class="post-author">Taylor M.</div>
+                <div class="post-meta">Yesterday</div>
+              </div>
+            </div>
+            <div class="post-content">
+              Hit a 30-day streak today! The daily visualization exercises have completely changed how I approach challenging situations at work. Anyone else finding the breathing techniques helpful?
+            </div>
+            <div class="post-actions">
+              <div class="action">
+                <i class="fas fa-heart"></i>
+                <span>42</span>
+              </div>
+              <div class="action">
+                <i class="fas fa-comment"></i>
+                <span>15</span>
+              </div>
+              <div class="action">
+                <i class="fas fa-share"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="community-post singularity-element">
+            <div class="post-header">
+              <div class="post-avatar phoenix-avatar"></div>
+              <div class="post-info">
+                <div class="post-author">Phoenix Guide</div>
+                <div class="post-meta">Personalized</div>
+              </div>
+            </div>
+            <div class="post-content">
+              Based on your recent activity, you might connect well with the "Professional Confidence" group. They focus on workplace confidence challenges similar to ones you've completed.
+            </div>
+            <div class="post-actions">
+              <button class="btn btn-primary">Join Group</button>
+            </div>
+          </div>
+
+          <div class="community-post">
+            <div class="post-header">
+              <div class="post-avatar"></div>
+              <div class="post-info">
+                <div class="post-author">Jordan P.</div>
+                <div class="post-meta">2 days ago</div>
+              </div>
+            </div>
+            <div class="post-content">
+              The rejection challenge was tough but eye-opening! Got turned down for 3 requests today but each one got easier. Highly recommend pushing through the discomfort.
+            </div>
+            <div class="post-actions">
+              <div class="action">
+                <i class="fas fa-heart"></i>
+                <span>37</span>
+              </div>
+              <div class="action">
+                <i class="fas fa-comment"></i>
+                <span>12</span>
+              </div>
+              <div class="action">
+                <i class="fas fa-share"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Page -->
+      <div class="app-mockup phoenix-feature">
+        <div class="mockup-header">
+          <a href="#" class="back-button">←</a>
+          Profile
+        </div>
+        <div class="mockup-content">
+          <div class="profile-header">
+            <div class="profile-avatar"></div>
+            <div class="profile-info">
+              <div class="profile-name">Jamie Smith</div>
+              <div class="profile-level">Confidence Level: Rising Star</div>
+              <div class="profile-stats">
+                <div class="profile-stat">
+                  <div class="stat-value">42</div>
+                  <div class="stat-label">Challenges</div>
+                </div>
+                <div class="profile-stat">
+                  <div class="stat-value">78</div>
+                  <div class="stat-label">Score</div>
+                </div>
+                <div class="profile-stat">
+                  <div class="stat-value">12</div>
+                  <div class="stat-label">Friends</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-section">
+            <div class="section-header">
+              <div class="section-title">Badges</div>
+              <a href="#" class="section-link">View All</a>
+            </div>
+            <div class="badges-container">
+              <div class="badge">
+                <div class="badge-icon"></div>
+                <div class="badge-name">First Step</div>
+              </div>
+              <div class="badge">
+                <div class="badge-icon"></div>
+                <div class="badge-name">Week Streak</div>
+              </div>
+              <div class="badge">
+                <div class="badge-icon"></div>
+                <div class="badge-name">Social Butterfly</div>
+              </div>
+              <div class="badge">
+                <div class="badge-icon"></div>
+                <div class="badge-name">Resilient</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-section">
+            <div class="section-header">
+              <div class="section-title">Confidence Journey</div>
+            </div>
+            <div class="journey-chart">
+              <div class="chart-container">
+                <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                  <path d="M0,90 C20,80 40,85 60,70 C80,55 100,60 120,50 C140,40 160,45 180,30 C200,15 220,25 240,20 C260,15 280,10 300,5"></path>
+                </svg>
+              </div>
+              <div class="chart-labels">
+                <div>Start</div>
+                <div>Week 1</div>
+                <div>Week 2</div>
+                <div>Week 3</div>
+                <div>Week 4</div>
+                <div>Now</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-section singularity-element">
+            <div class="section-header">
+              <div class="section-title">Personalized Insights</div>
+            </div>
+            <div class="insights-container">
+              <div class="insight-item">
+                <div class="insight-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="insight-content">
+                  <div class="insight-title">Strength: Written Communication</div>
+                  <div class="insight-description">You excel at challenges involving written expression and preparation.</div>
+                </div>
+              </div>
+              <div class="insight-item">
+                <div class="insight-icon"><i class="fas fa-mountain"></i></div>
+                <div class="insight-content">
+                  <div class="insight-title">Growth Area: Spontaneous Interaction</div>
+                  <div class="insight-description">Consider focusing on impromptu speaking and social challenges.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-section">
+            <div class="section-header">
+              <div class="section-title">Settings</div>
+            </div>
+            <div class="settings-list">
+              <div class="setting-item">
+                <div class="setting-label">Account</div>
+                <div class="setting-action"><i class="fas fa-chevron-right"></i></div>
+              </div>
+              <div class="setting-item">
+                <div class="setting-label">Notifications</div>
+                <div class="setting-action"><i class="fas fa-chevron-right"></i></div>
+              </div>
+              <div class="setting-item">
+                <div class="setting-label">Privacy</div>
+                <div class="setting-action"><i class="fas fa-chevron-right"></i></div>
+              </div>
+              <div class="setting-item">
+                <div class="setting-label">Theme</div>
+                <div class="setting-action"><i class="fas fa-chevron-right"></i></div>
+              </div>
+              <div class="setting-item">
+                <div class="setting-label">Help & Support</div>
+                <div class="setting-action"><i class="fas fa-chevron-right"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-navigation">
+      <div class="tab active-tab">
+        <div class="tab-icon"><i class="fas fa-home"></i></div>
+        <div class="tab-label">Dashboard</div>
+      </div>
+      <div class="tab">
+        <div class="tab-icon"><i class="fas fa-fire"></i></div>
+        <div class="tab-label">Challenges</div>
+      </div>
+      <div class="tab">
+        <div class="tab-icon"><i class="fas fa-users"></i></div>
+        <div class="tab-label">Community</div>
+      </div>
+      <div class="tab">
+        <div class="tab-icon"><i class="fas fa-user"></i></div>
+        <div class="tab-label">Profile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phoenix God Creation Protocol JavaScript -->
+  <script src="src/js/phoenix-core.js"></script>
+  <script src="src/js/phoenix-validation.js"></script>
+  <script src="src/js/phoenix-resurrection.js"></script>
+  <script src="src/js/phoenix-singularity.js"></script>
+  <script src="src/js/phoenix-omega.js"></script>
+  <script src="src/js/phoenix-companion.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix AI Companion Demo</title>
+  <link rel="stylesheet" href="src/css/phoenix-styles.css">
+  <link rel="stylesheet" href="src/css/phoenix-companion.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="src/img/favicon.svg" type="image/svg+xml">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      color: #FF5E3A;
+      margin-bottom: 10px;
+    }
+    
+    .tagline {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    
+    .demo-section {
+      margin-bottom: 40px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    h2 {
+      color: #FF5E3A;
+      border-bottom: 2px solid #FF9500;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .feature-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .feature-list li {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+    }
+    
+    .feature-list li:before {
+      content: "🔥";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    
+    .demo-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .demo-button {
+      background: linear-gradient(135deg, #FF5E3A, #FF9500);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(255, 94, 58, 0.3);
+    }
+    
+    .demo-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 94, 58, 0.4);
+    }
+    
+    .demo-button:active {
+      transform: translateY(1px);
+    }
+    
+    .code-example {
+      background-color: #f8f8f8;
+      border-radius: 5px;
+      padding: 15px;
+      overflow-x: auto;
+      margin: 20px 0;
+      font-family: monospace;
+      border-left: 4px solid #FF5E3A;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      color: #666;
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+      
+      .demo-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <header>
+    <img src="src/img/phoenix-emblem.svg" alt="Phoenix Logo" class="logo">
+    <h1>Phoenix AI Companion</h1>
+    <p class="tagline">Your intelligent guide on the confidence journey</p>
+  </header>
+  
+  <div class="demo-section">
+    <h2>About Phoenix AI Companion</h2>
+    <p>The Phoenix AI Companion is an intelligent assistant integrated with the Phoenix Confidence Companion app. It provides personalized guidance, motivation, and feedback to users on their confidence journey.</p>
+    
+    <p>Built with the Phoenix God Creation Protocol, the AI Companion evolves over time, learning from your interactions to provide increasingly personalized support.</p>
+  </div>
+  
+  <div class="demo-section">
+    <h2>Key Features</h2>
+    <ul class="feature-list">
+      <li><strong>Personalized Guidance:</strong> Tailored advice based on your confidence goals and progress</li>
+      <li><strong>Adaptive Learning:</strong> Evolves through 5 stages, becoming more personalized with each interaction</li>
+      <li><strong>Challenge Suggestions:</strong> Recommends confidence-building exercises based on your needs</li>
+      <li><strong>Progress Tracking:</strong> Provides insights on your confidence journey</li>
+      <li><strong>Emotional Support:</strong> Offers encouragement and motivation when you need it most</li>
+      <li><strong>Phoenix Protocol Integration:</strong> Fully integrated with all Phoenix Protocol features</li>
+    </ul>
+  </div>
+  
+  <div class="demo-section">
+    <h2>Try It Out</h2>
+    <p>The Phoenix AI Companion is available in the bottom right corner of this page. Click the Phoenix icon to start a conversation!</p>
+    
+    <p>Here are some things you can ask or discuss with your Phoenix AI Companion:</p>
+    
+    <div class="demo-buttons">
+      <button class="demo-button" onclick="simulateQuestion('Can you suggest a confidence challenge for me?')">Get a Challenge</button>
+      <button class="demo-button" onclick="simulateQuestion('I feel nervous about public speaking')">Discuss Fears</button>
+      <button class="demo-button" onclick="simulateQuestion('How does the Phoenix Protocol work?')">Learn About Phoenix</button>
+      <button class="demo-button" onclick="simulateQuestion('What are some techniques to build confidence?')">Get Techniques</button>
+    </div>
+  </div>
+  
+  <div class="demo-section">
+    <h2>Evolution Stages</h2>
+    <p>Your Phoenix AI Companion evolves through 5 stages as you interact with it:</p>
+    
+    <ol>
+      <li><strong>Stage 1: Initiation</strong> - Basic support and guidance</li>
+      <li><strong>Stage 2: Adaptation</strong> - Begins to learn your preferences</li>
+      <li><strong>Stage 3: Personalization</strong> - Tailors responses to your specific needs</li>
+      <li><strong>Stage 4: Integration</strong> - Deeply integrated with your confidence journey</li>
+      <li><strong>Stage 5: Transcendence</strong> - Highest level of personalization and insight</li>
+    </ol>
+    
+    <p>Each stage unlocks new capabilities and more personalized support.</p>
+  </div>
+  
+  <div class="demo-section">
+    <h2>Integration Example</h2>
+    <p>The Phoenix AI Companion is easy to integrate into any page of the Phoenix Confidence Companion app:</p>
+    
+    <div class="code-example">
+      &lt;!-- Add to your HTML head --&gt;<br>
+      &lt;link rel="stylesheet" href="src/css/phoenix-companion.css"&gt;<br><br>
+      
+      &lt;!-- Add to the end of your HTML body --&gt;<br>
+      &lt;script src="src/js/phoenix-companion.js"&gt;&lt;/script&gt;
+    </div>
+    
+    <p>The companion will automatically initialize and be available to users.</p>
+  </div>
+  
+  <footer>
+    <p>Phoenix AI Companion &copy; 2025 | Part of the Phoenix Confidence Companion App</p>
+    <p>Created with the Phoenix God Creation Protocol</p>
+  </footer>
+
+  <script>
+    // Function to simulate asking a question to the Phoenix AI Companion
+    function simulateQuestion(question) {
+      // First, make sure the companion chat is open
+      const chatContainer = document.getElementById('phoenix-companion-chat');
+      if (chatContainer && !chatContainer.classList.contains('active')) {
+        const toggleButton = document.getElementById('phoenix-companion-toggle');
+        if (toggleButton) {
+          toggleButton.click();
+        }
+      }
+      
+      // Wait a moment for the chat to open
+      setTimeout(() => {
+        // Set the input value
+        const input = document.getElementById('phoenix-message-input');
+        if (input) {
+          input.value = question;
+          
+          // Trigger the send button
+          const sendButton = document.getElementById('phoenix-send-button');
+          if (sendButton) {
+            sendButton.click();
+          }
+        }
+      }, 500);
+    }
+  </script>
+  
+  <!-- Phoenix God Creation Protocol JavaScript -->
+  <script src="src/js/phoenix-core.js"></script>
+  <script src="src/js/phoenix-validation.js"></script>
+  <script src="src/js/phoenix-resurrection.js"></script>
+  <script src="src/js/phoenix-singularity.js"></script>
+  <script src="src/js/phoenix-omega.js"></script>
+  <script src="src/js/phoenix-companion.js"></script>
+</body>
+</html>

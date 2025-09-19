@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Up Your Profile - Phoenix Confidence Companion</title>
+  <link rel="stylesheet" href="../src/css/phoenix-styles.css">
+  <link rel="stylesheet" href="../src/css/phoenix-auth.css">
+  <link rel="stylesheet" href="../src/css/phoenix-profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="../src/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#FF5E3A">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <div class="profile-setup-container">
+    <div class="profile-setup-card phoenix-card">
+      <div class="setup-header">
+        <div class="phoenix-emblem">
+          <img src="../src/img/phoenix-emblem.svg" alt="Phoenix Emblem" class="phoenix-icon">
+        </div>
+        <h1>Complete Your Profile</h1>
+        <p class="setup-subtitle">Let's personalize your confidence journey</p>
+        
+        <div class="setup-progress">
+          <div class="progress-steps">
+            <div class="step active" data-step="1">
+              <div class="step-number">1</div>
+              <div class="step-label">Basics</div>
+            </div>
+            <div class="step" data-step="2">
+              <div class="step-number">2</div>
+              <div class="step-label">Goals</div>
+            </div>
+            <div class="step" data-step="3">
+              <div class="step-number">3</div>
+              <div class="step-label">Assessment</div>
+            </div>
+            <div class="step" data-step="4">
+              <div class="step-number">4</div>
+              <div class="step-label">Preferences</div>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 25%;"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="setup-body">
+        <!-- Step 1: Basic Information -->
+        <div class="setup-step active" id="step1">
+          <h2>Basic Information</h2>
+          <p class="step-description">Tell us a bit about yourself so we can personalize your experience.</p>
+          
+          <form id="basicInfoForm" class="setup-form">
+            <div class="form-group">
+              <label for="displayName">Display Name</label>
+              <div class="input-with-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" id="displayName" name="displayName" placeholder="How you want to be known" required>
+              </div>
+              <div class="validation-message" id="displayName-validation"></div>
+            </div>
+            
+            <div class="form-group">
+              <label>Profile Picture</label>
+              <div class="profile-picture-upload">
+                <div class="profile-picture-preview">
+                  <img src="../src/img/default-avatar.svg" alt="Profile Picture" id="profilePicturePreview">
+                  <div class="upload-overlay">
+                    <i class="fas fa-camera"></i>
+                  </div>
+                </div>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" class="hidden-upload">
+                <button type="button" class="btn btn-secondary btn-sm" id="uploadTrigger">Upload Photo</button>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="birthdate">Birthdate</label>
+              <div class="input-with-icon">
+                <i class="fas fa-calendar"></i>
+                <input type="date" id="birthdate" name="birthdate">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="location">Location</label>
+              <div class="input-with-icon">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" id="location" name="location" placeholder="City, Country">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="bio">Short Bio</label>
+              <textarea id="bio" name="bio" placeholder="Tell us a bit about yourself..." rows="3"></textarea>
+              <div class="character-counter">
+                <span id="bioCharCount">0</span>/150
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary" id="skipStep1">Skip for Now</button>
+              <button type="submit" class="btn btn-primary" id="nextStep1">Continue</button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Step 2: Confidence Goals -->
+        <div class="setup-step" id="step2">
+          <h2>Your Confidence Goals</h2>
+          <p class="step-description">Select the areas where you'd like to build more confidence.</p>
+          
+          <form id="goalsForm" class="setup-form">
+            <div class="goals-grid">
+              <div class="goal-card">
+                <input type="checkbox" id="goal1" name="goals" value="public_speaking">
+                <label for="goal1" class="goal-label">
+                  <div class="goal-icon"><i class="fas fa-microphone"></i></div>
+                  <div class="goal-text">Public Speaking</div>
+                </label>
+              </div>
+              
+              <div class="goal-card">
+                <input type="checkbox" id="goal2" name="goals" value="social_interactions">
+                <label for="goal2" class="goal-label">
+                  <div class="goal-icon"><i class="fas fa-users"></i></div>
+                  <div class="goal-text">Social Interactions</div>
+                </label>
+              </div>
+              
+              <div class="goal-card">
+                <input type="checkbox" id="goal3" name="goals" value="career_advancement">
+                <label for="goal3" class="goal-label">
+                  <div class="goal-icon"><i class="fas fa-briefcase"></i></div>
+                  <div class="goal-text">Career Advancement</div>
+                </label>
+              </div>
+              
+              <div class="goal-card">
+                <input type="checkbox" id="goal4" name="goals" value="leadership">
+                <label for="goal4" class="goal-label">
+                  <div class="goal-icon"><i class="fas fa-crown"></i></div>
+                  <div class="goal-text">Leadership</div>
+                </label>
+              </div>
+              
+              <div class="goal-card">
+                <input type="checkbox" id="goal5" name="goals" value="dating_relationships">
+                <label for="goal5" class="goal-label">
+                  <div class="goal-icon"><i class="fas fa-heart"></i></div>
+                  <div class="goal-text">Dating & Relationships</div>
+                </label>
+              </div>
+              
+              <div class="goal-card">
+                <input type="checkbox" id="goal6" name="goals" value="assertiveness">
+                <label for="goal6" class="goal-label">
+                  <div class="goal-icon"><i class="fas fa-exclamation"></i></div>
+                  <div class="goal-text">Assertiveness</div>
+                </label>
+              </div>
+              
+              <div class="goal-card">
+                <input type="checkbox" id="goal7" name="goals" value="body_image">
+                <label for="goal7" class="goal-label">
+                  <div class="goal-icon"><i class="fas fa-mirror"></i></div>
+                  <div class="goal-text">Body Image</div>
+                </label>
+              </div>
+              
+              <div class="goal-card">
+                <input type="checkbox" id="goal8" name="goals" value="decision_making">
+                <label for="goal8" class="goal-label">
+                  <div class="goal-icon"><i class="fas fa-check-circle"></i></div>
+                  <div class="goal-text">Decision Making</div>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="customGoal">Other Goal (Optional)</label>
+              <input type="text" id="customGoal" name="customGoal" placeholder="Enter another confidence goal">
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn btn-text" id="backStep2">Back</button>
+              <button type="submit" class="btn btn-primary" id="nextStep2">Continue</button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Step 3: Confidence Assessment -->
+        <div class="setup-step" id="step3">
+          <h2>Confidence Assessment</h2>
+          <p class="step-description">Rate your current confidence level in different situations.</p>
+          
+          <form id="assessmentForm" class="setup-form">
+            <div class="assessment-item">
+              <div class="assessment-question">
+                <label>Speaking in front of groups</label>
+                <div class="rating-value" id="rating1Value">5</div>
+              </div>
+              <div class="confidence-rating">
+                <span class="rating-label">Low</span>
+                <div class="rating-slider">
+                  <input type="range" min="1" max="10" value="5" id="rating1" name="publicSpeaking">
+                </div>
+                <span class="rating-label">High</span>
+              </div>
+            </div>
+            
+            <div class="assessment-item">
+              <div class="assessment-question">
+                <label>Meeting new people</label>
+                <div class="rating-value" id="rating2Value">5</div>
+              </div>
+              <div class="confidence-rating">
+                <span class="rating-label">Low</span>
+                <div class="rating-slider">
+                  <input type="range" min="1" max="10" value="5" id="rating2" name="socializing">
+                </div>
+                <span class="rating-label">High</span>
+              </div>
+            </div>
+            
+            <div class="assessment-item">
+              <div class="assessment-question">
+                <label>Expressing disagreement</label>
+                <div class="rating-value" id="rating3Value">5</div>
+              </div>
+              <div class="confidence-rating">
+                <span class="rating-label">Low</span>
+                <div class="rating-slider">
+                  <input type="range" min="1" max="10" value="5" id="rating3" name="assertiveness">
+                </div>
+                <span class="rating-label">High</span>
+              </div>
+            </div>
+            
+            <div class="assessment-item">
+              <div class="assessment-question">
+                <label>Receiving criticism</label>
+                <div class="rating-value" id="rating4Value">5</div>
+              </div>
+              <div class="confidence-rating">
+                <span class="rating-label">Low</span>
+                <div class="rating-slider">
+                  <input type="range" min="1" max="10" value="5" id="rating4" name="criticism">
+                </div>
+                <span class="rating-label">High</span>
+              </div>
+            </div>
+            
+            <div class="assessment-item">
+              <div class="assessment-question">
+                <label>Taking on leadership roles</label>
+                <div class="rating-value" id="rating5Value">5</div>
+              </div>
+              <div class="confidence-rating">
+                <span class="rating-label">Low</span>
+                <div class="rating-slider">
+                  <input type="range" min="1" max="10" value="5" id="rating5" name="leadership">
+                </div>
+                <span class="rating-label">High</span>
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn btn-text" id="backStep3">Back</button>
+              <button type="submit" class="btn btn-primary" id="nextStep3">Continue</button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Step 4: Preferences -->
+        <div class="setup-step" id="step4">
+          <h2>Your Preferences</h2>
+          <p class="step-description">Customize your experience with the Phoenix Confidence Companion.</p>
+          
+          <form id="preferencesForm" class="setup-form">
+            <div class="form-group">
+              <label>Challenge Frequency</label>
+              <div class="preference-options">
+                <div class="preference-option">
+                  <input type="radio" id="freq1" name="challengeFrequency" value="daily" checked>
+                  <label for="freq1">
+                    <div class="option-icon"><i class="fas fa-calendar-day"></i></div>
+                    <div class="option-text">Daily</div>
+                  </label>
+                </div>
+                <div class="preference-option">
+                  <input type="radio" id="freq2" name="challengeFrequency" value="weekdays">
+                  <label for="freq2">
+                    <div class="option-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="option-text">Weekdays</div>
+                  </label>
+                </div>
+                <div class="preference-option">
+                  <input type="radio" id="freq3" name="challengeFrequency" value="weekends">
+                  <label for="freq3">
+                    <div class="option-icon"><i class="fas fa-umbrella-beach"></i></div>
+                    <div class="option-text">Weekends</div>
+                  </label>
+                </div>
+                <div class="preference-option">
+                  <input type="radio" id="freq4" name="challengeFrequency" value="custom">
+                  <label for="freq4">
+                    <div class="option-icon"><i class="fas fa-sliders-h"></i></div>
+                    <div class="option-text">Custom</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Challenge Difficulty</label>
+              <div class="preference-options">
+                <div class="preference-option">
+                  <input type="radio" id="diff1" name="challengeDifficulty" value="gentle">
+                  <label for="diff1">
+                    <div class="option-icon"><i class="fas fa-feather"></i></div>
+                    <div class="option-text">Gentle</div>
+                  </label>
+                </div>
+                <div class="preference-option">
+                  <input type="radio" id="diff2" name="challengeDifficulty" value="balanced" checked>
+                  <label for="diff2">
+                    <div class="option-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="option-text">Balanced</div>
+                  </label>
+                </div>
+                <div class="preference-option">
+                  <input type="radio" id="diff3" name="challengeDifficulty" value="ambitious">
+                  <label for="diff3">
+                    <div class="option-icon"><i class="fas fa-mountain"></i></div>
+                    <div class="option-text">Ambitious</div>
+                  </label>
+                </div>
+                <div class="preference-option">
+                  <input type="radio" id="diff4" name="challengeDifficulty" value="adaptive">
+                  <label for="diff4">
+                    <div class="option-icon"><i class="fas fa-brain"></i></div>
+                    <div class="option-text">Adaptive</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Notifications</label>
+              <div class="toggle-switches">
+                <div class="toggle-item">
+                  <label for="notifyChallenge">Challenge Reminders</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="notifyChallenge" name="notifyChallenge" checked>
+                    <span class="toggle-slider"></span>
+                  </div>
+                </div>
+                <div class="toggle-item">
+                  <label for="notifyProgress">Progress Updates</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="notifyProgress" name="notifyProgress" checked>
+                    <span class="toggle-slider"></span>
+                  </div>
+                </div>
+                <div class="toggle-item">
+                  <label for="notifyCommunity">Community Activity</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="notifyCommunity" name="notifyCommunity" checked>
+                    <span class="toggle-slider"></span>
+                  </div>
+                </div>
+                <div class="toggle-item">
+                  <label for="notifyTips">Confidence Tips</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="notifyTips" name="notifyTips" checked>
+                    <span class="toggle-slider"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Privacy Settings</label>
+              <div class="toggle-switches">
+                <div class="toggle-item">
+                  <label for="privacyProfile">Public Profile</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="privacyProfile" name="privacyProfile" checked>
+                    <span class="toggle-slider"></span>
+                  </div>
+                </div>
+                <div class="toggle-item">
+                  <label for="privacyProgress">Share Progress</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="privacyProgress" name="privacyProgress">
+                    <span class="toggle-slider"></span>
+                  </div>
+                </div>
+                <div class="toggle-item">
+                  <label for="privacyActivity">Activity Visibility</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="privacyActivity" name="privacyActivity" checked>
+                    <span class="toggle-slider"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn btn-text" id="backStep4">Back</button>
+              <button type="submit" class="btn btn-primary" id="completeSetup">Complete Setup</button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Completion Screen -->
+        <div class="setup-step" id="completion">
+          <div class="completion-content">
+            <div class="completion-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Profile Setup Complete!</h2>
+            <p class="completion-message">Your confidence journey is ready to begin. We've created a personalized path based on your goals and preferences.</p>
+            
+            <div class="phoenix-activation singularity-element">
+              <div class="activation-icon">
+                <img src="../src/img/phoenix-emblem.svg" alt="Phoenix Emblem" class="phoenix-icon">
+              </div>
+              <div class="activation-message">
+                <h3>Phoenix Protocol Activated</h3>
+                <p>Your experience will now adapt and evolve as you progress.</p>
+              </div>
+            </div>
+            
+            <div class="completion-actions">
+              <a href="dashboard.html" class="btn btn-primary btn-lg">Begin Your Journey</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phoenix God Creation Protocol JavaScript -->
+  <script src="../src/js/phoenix-core.js"></script>
+  <script src="../src/js/phoenix-validation.js"></script>
+  <script src="../src/js/phoenix-profile.js"></script>
+</body>
+</html>

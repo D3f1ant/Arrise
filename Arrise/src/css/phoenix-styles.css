@@ -1,0 +1,1088 @@
+/* Phoenix God Creation Protocol - Enhanced Styles */
+/* Created through Strategic Deployment of the Architect Operative */
+
+:root {
+    /* Original Color Palette */
+    --trust-blue: #1A4B84;
+    --action-orange: #F26C4F;
+    --growth-green: #3E9B67;
+    --foundation-gray: #E9E9E9;
+    --text-black: #333333;
+    --highlight-gold: #F2C94C;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    
+    /* Enhanced Phoenix Protocol Color Palette */
+    --phoenix-red: #FF3A2E;
+    --phoenix-gold: #FFD700;
+    --cosmic-purple: #6A0DAD;
+    --evolution-teal: #008080;
+    --omega-blue: #0047AB;
+    --singularity-black: #121212;
+    --resurrection-green: #00C957;
+    --chaos-pink: #FF1493;
+    
+    /* Adaptive Variables - These will change via JS */
+    --primary-color: var(--trust-blue);
+    --secondary-color: var(--action-orange);
+    --accent-color: var(--highlight-gold);
+    --background-color: var(--light-gray);
+    --text-color: var(--text-black);
+    
+    /* System States */
+    --success-color: var(--growth-green);
+    --warning-color: var(--highlight-gold);
+    --danger-color: var(--phoenix-red);
+    --info-color: var(--omega-blue);
+    
+    /* Animation Speeds */
+    --transition-slow: 0.5s;
+    --transition-medium: 0.3s;
+    --transition-fast: 0.15s;
+    
+    /* Spacing System */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-xxl: 3rem;
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-secondary: 'Arial', sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+    --font-size-xxxl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-circle: 50%;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+    --shadow-inner: inset 0 2px 4px rgba(0,0,0,0.06);
+    --shadow-focus: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    
+    /* Z-index layers */
+    --z-background: -10;
+    --z-default: 1;
+    --z-floating: 10;
+    --z-overlay: 100;
+    --z-modal: 1000;
+    --z-toast: 2000;
+    --z-phoenix: 9999; /* Highest priority elements */
+}
+
+/* Base Reset - Implemented by Auditor Operative */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessibility Enhancements - Implemented by Integrator Operative */
+:focus {
+    outline: 3px solid var(--omega-blue);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--omega-blue);
+    outline-offset: 2px;
+}
+
+/* Phoenix Animation Framework - Implemented by Cosmic Pathfinder Operative */
+@keyframes phoenix-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes phoenix-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes phoenix-slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes phoenix-glow {
+    0% { box-shadow: 0 0 5px var(--phoenix-gold); }
+    50% { box-shadow: 0 0 20px var(--phoenix-gold); }
+    100% { box-shadow: 0 0 5px var(--phoenix-gold); }
+}
+
+@keyframes phoenix-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Base Styles - Enhanced by Architect Operative */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: var(--font-size-md);
+    transition: background-color var(--transition-medium) ease;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-md);
+    position: relative;
+}
+
+/* Header - Enhanced by Evolutionary Strategist Operative */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--space-lg) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-medium) ease;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+
+.logo {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    margin-bottom: var(--space-sm);
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--phoenix-gold);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition-medium) ease;
+}
+
+.logo:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.tagline {
+    font-size: var(--font-size-sm);
+    font-style: italic;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+/* Phoenix Header Enhancement */
+.phoenix-emblem {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-circle);
+    background: linear-gradient(135deg, var(--phoenix-red), var(--phoenix-gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: var(--font-size-md);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: all var(--transition-medium) ease;
+    z-index: 10;
+}
+
+.phoenix-emblem:hover {
+    transform: rotate(180deg) scale(1.1);
+    box-shadow: 0 0 15px var(--phoenix-gold);
+}
+
+/* App Showcase - Enhanced by Integrator Operative */
+.app-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: var(--space-xl) 0;
+    gap: var(--space-lg);
+}
+
+.app-mockup {
+    width: calc(50% - var(--space-md));
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-lg);
+    transition: all var(--transition-medium) ease;
+    position: relative;
+}
+
+.app-mockup:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mockup-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--space-md);
+    text-align: center;
+    position: relative;
+    transition: background-color var(--transition-medium) ease;
+}
+
+.back-button {
+    position: absolute;
+    left: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--font-size-lg);
+    opacity: 0.8;
+    transition: opacity var(--transition-fast) ease;
+}
+
+.back-button:hover {
+    opacity: 1;
+}
+
+.mockup-content {
+    padding: var(--space-lg);
+}
+
+/* Progress Tracker - Enhanced by Phoenix Handler Operative */
+.progress-tracker {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-medium) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-tracker::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--phoenix-red), var(--phoenix-gold), var(--growth-green));
+    transform: translateX(-100%);
+    animation: phoenix-slide-right 2s infinite;
+}
+
+@keyframes phoenix-slide-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-tracker:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.progress-title {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.progress-title::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 30%;
+    height: 2px;
+    background-color: var(--action-orange);
+}
+
+.progress-days {
+    background-color: var(--action-orange);
+    color: var(--white);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    transition: all var(--transition-medium) ease;
+}
+
+.progress-days:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-sm);
+}
+
+.progress-bar-container {
+    height: 10px;
+    background-color: var(--foundation-gray);
+    border-radius: 5px;
+    margin-bottom: var(--space-sm);
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--growth-green), var(--evolution-teal));
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+    animation: phoenix-shine 2s infinite;
+}
+
+@keyframes phoenix-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-sm);
+    color: #666;
+}
+
+/* Daily Challenge - Enhanced by Saboteur Operative */
+.daily-challenge {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    border-left: 4px solid var(--action-orange);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-medium) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.daily-challenge:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.daily-challenge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 40px 40px 0;
+    border-color: transparent var(--action-orange) transparent transparent;
+    opacity: 0.5;
+    transition: all var(--transition-medium) ease;
+}
+
+.daily-challenge:hover::before {
+    border-width: 0 50px 50px 0;
+    opacity: 0.7;
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.challenge-title {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+}
+
+.challenge-tag {
+    background-color: var(--foundation-gray);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 15px;
+    font-size: var(--font-size-xs);
+    transition: all var(--transition-fast) ease;
+}
+
+.challenge-tag:hover {
+    background-color: var(--highlight-gold);
+    color: var(--text-black);
+}
+
+.challenge-description {
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+}
+
+.challenge-actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+/* Button Styles - Enhanced by Optimizer Operative */
+.btn {
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-medium) ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    transform: translateX(-100%);
+    transition: transform var(--transition-medium) ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
+}
+
+.btn-primary {
+    background-color: var(--trust-blue);
+    color: var(--white);
+    box-shadow: 0 2px 4px rgba(26, 75, 132, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #15406f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(26, 75, 132, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(26, 75, 132, 0.4);
+}
+
+.btn-secondary {
+    background-color: var(--foundation-gray);
+    color: var(--text-black);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: #dcdcdc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Phoenix Button Styles */
+.btn-phoenix {
+    background: linear-gradient(135deg, var(--phoenix-red), var(--phoenix-gold));
+    color: var(--white);
+    box-shadow: 0 2px 10px rgba(242, 108, 79, 0.5);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-phoenix::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform var(--transition-medium) ease, opacity var(--transition-medium) ease;
+    z-index: -1;
+}
+
+.btn-phoenix:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(242, 108, 79, 0.7);
+}
+
+.btn-phoenix:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.btn-phoenix:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(242, 108, 79, 0.7);
+}
+
+/* Confidence Score - Enhanced by Evolutionary Strategist Operative */
+.confidence-score {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-medium) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.confidence-score:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.score-title {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--space-sm);
+    font-weight: bold;
+}
+
+.score-value {
+    font-size: var(--font-size-xxxl);
+    font-weight: bold;
+    color: var(--trust-blue);
+    margin-bottom: var(--space-sm);
+    position: relative;
+    display: inline-block;
+    transition: all var(--transition-medium) ease;
+}
+
+.score-value:hover {
+    transform: scale(1.05);
+    color: var(--omega-blue);
+}
+
+.score-value::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--trust-blue), var(--omega-blue));
+    border-radius: 3px;
+}
+
+.score-label {
+    font-size: var(--font-size-sm);
+    color: #666;
+    margin-bottom: var(--space-md);
+}
+
+.score-history {
+    height: 100px;
+    background-color: var(--foundation-gray);
+    border-radius: var(--radius-sm);
+    position: relative;
+    margin-top: var(--space-lg);
+    overflow: hidden;
+}
+
+.history-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--space-sm);
+}
+
+.history-line svg {
+    width: 100%;
+    height: 100%;
+}
+
+.history-line path {
+    stroke: var(--growth-green);
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+}
+
+.history-line circle {
+    fill: var(--action-orange);
+    r: 4;
+    transition: all var(--transition-medium) ease;
+}
+
+.history-line circle:hover {
+    r: 6;
+    fill: var(--phoenix-red);
+    filter: drop-shadow(0 0 5px var(--phoenix-gold));
+}
+
+/* Tab Navigation - Enhanced by Cosmic Pathfinder Operative */
+.tab-navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--white);
+    padding: var(--space-md) 0;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    margin-top: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    z-index: 2;
+}
+
+.tab {
+    text-align: center;
+    width: 25%;
+    cursor: pointer;
+    position: relative;
+    transition: all var(--transition-medium) ease;
+}
+
+.tab::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 3px;
+    background-color: var(--action-orange);
+    transition: transform var(--transition-medium) ease;
+    border-radius: 3px;
+}
+
+.tab:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.tab-icon {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-xs);
+    transition: all var(--transition-medium) ease;
+}
+
+.tab:hover .tab-icon {
+    transform: translateY(-3px);
+}
+
+.tab-label {
+    font-size: var(--font-size-xs);
+    transition: all var(--transition-medium) ease;
+}
+
+.active-tab {
+    color: var(--action-orange);
+}
+
+.active-tab::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Assessment Card - Enhanced by Auditor Operative */
+.assessment-card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-medium) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.assessment-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.assessment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.assessment-title {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+}
+
+.assessment-time {
+    font-size: var(--font-size-sm);
+    color: #666;
+}
+
+/* Achievement Badges - Enhanced by Omega Custodian Operative */
+.achievement-badges {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.badge {
+    text-align: center;
+    transition: all var(--transition-medium) ease;
+    cursor: pointer;
+}
+
+.badge:hover {
+    transform: translateY(-5px);
+}
+
+.badge-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-circle);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-xl);
+    margin: 0 auto var(--space-xs) auto;
+    transition: all var(--transition-medium) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity var(--transition-medium) ease;
+}
+
+.badge:hover .badge-icon::after {
+    opacity: 1;
+}
+
+.badge-label {
+    font-size: var(--font-size-xs);
+    transition: all var(--transition-medium) ease;
+}
+
+.badge:hover .badge-label {
+    font-weight: bold;
+}
+
+/* Phoenix-specific Enhancements - Added by Phoenix Handler Operative */
+.phoenix-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.phoenix-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,58,46,0.05) 0%, rgba(255,215,0,0) 70%);
+    animation: phoenix-pulse 10s infinite;
+    z-index: -1;
+}
+
+.phoenix-glow {
+    animation: phoenix-glow 2s infinite;
+}
+
+.phoenix-fade-in {
+    animation: phoenix-fade-in 1s ease forwards;
+}
+
+.phoenix-slide-up {
+    animation: phoenix-slide-up 0.5s ease forwards;
+}
+
+/* Responsive Design - Enhanced by Integrator Operative */
+@media (max-width: 768px) {
+    .app-mockup {
+        width: 100%;
+    }
+    
+    .container {
+        padding: var(--space-sm);
+    }
+    
+    .achievement-badges {
+        gap: var(--space-sm);
+    }
+    
+    .badge-icon {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-lg);
+    }
+    
+    .score-value {
+        font-size: var(--font-size-xxl);
+    }
+    
+    .tab-icon {
+        font-size: var(--font-size-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .challenge-header, .progress-header, .assessment-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+    }
+    
+    .challenge-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .badge-icon {
+        width: 35px;
+        height: 35px;
+        font-size: var(--font-size-md);
+    }
+    
+    .badge-label {
+        font-size: 10px;
+    }
+}
+
+/* Dark Mode - Added by Evolutionary Strategist Operative */
+.dark-mode {
+    --background-color: var(--singularity-black);
+    --text-color: #f5f5f5;
+    --foundation-gray: #333;
+    --white: #222;
+    --light-gray: #1a1a1a;
+}
+
+.dark-mode .progress-bar-container {
+    background-color: #444;
+}
+
+.dark-mode .btn-secondary {
+    background-color: #444;
+    color: #f5f5f5;
+}
+
+.dark-mode .score-history {
+    background-color: #333;
+}
+
+/* Accessibility Features - Added by Integrator Operative */
+.high-contrast {
+    --trust-blue: #0066CC;
+    --action-orange: #FF5500;
+    --growth-green: #00AA00;
+    --text-black: #000000;
+    --white: #FFFFFF;
+    --light-gray: #F0F0F0;
+    --foundation-gray: #DDDDDD;
+}
+
+.large-text {
+    --font-size-xs: 1rem;
+    --font-size-sm: 1.125rem;
+    --font-size-md: 1.25rem;
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 1.75rem;
+    --font-size-xxl: 2.25rem;
+    --font-size-xxxl: 3.25rem;
+}
+
+/* Print Styles - Added by Auditor Operative */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .app-mockup {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .btn, .tab-navigation, .phoenix-emblem {
+        display: none;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Animation Control - Added by Optimizer Operative */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Phoenix Protocol Special Features - Added by Omega Custodian Operative */
+.phoenix-feature {
+    position: relative;
+    overflow: hidden;
+}
+
+.phoenix-feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,58,46,0.05), rgba(255,215,0,0.05));
+    z-index: -1;
+}
+
+.phoenix-feature::after {
+    content: '🔥';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: var(--font-size-sm);
+    opacity: 0.7;
+}
+
+/* Chaos Monkey Elements - Added by Saboteur Operative */
+.chaos-element {
+    position: relative;
+    overflow: hidden;
+}
+
+.chaos-element::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--chaos-pink), transparent);
+}
+
+/* Resurrection Elements - Added by Phoenix Handler Operative */
+.resurrection-element {
+    position: relative;
+}
+
+.resurrection-element::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--resurrection-green), transparent);
+}
+
+/* Singularity Elements - Added by Evolutionary Strategist Operative */
+.singularity-element {
+    position: relative;
+}
+
+.singularity-element::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent var(--cosmic-purple) transparent transparent;
+    opacity: 0.7;
+}
+
+/* Omega Elements - Added by Omega Custodian Operative */
+.omega-element {
+    position: relative;
+}
+
+.omega-element::after {
+    content: 'Ω';
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: var(--font-size-xs);
+    color: var(--omega-blue);
+    opacity: 0.7;
+}

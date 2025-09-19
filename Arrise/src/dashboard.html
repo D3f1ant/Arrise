@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Phoenix Confidence Companion</title>
+  <link rel="stylesheet" href="../src/css/phoenix-styles.css">
+  <link rel="stylesheet" href="../src/css/phoenix-dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="../src/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#FF5E3A">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <div class="dashboard-container phoenix-container">
+    <header class="app-header">
+      <div class="header-left">
+        <a href="../index.html" class="back-link">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <div class="header-title">Dashboard</div>
+      </div>
+      <div class="header-right">
+        <button class="icon-button notifications-button">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">2</span>
+        </button>
+        <div class="user-avatar">
+          <img src="../src/img/default-avatar.svg" alt="User Avatar">
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-content">
+      <section class="welcome-section">
+        <div class="welcome-message">
+          <h1>Welcome back, <span class="user-name">Jamie</span></h1>
+          <p class="welcome-subtitle">Ready to continue your confidence journey?</p>
+        </div>
+        <div class="phoenix-emblem">
+          <img src="../src/img/phoenix-emblem.svg" alt="Phoenix Emblem" class="phoenix-icon">
+        </div>
+      </section>
+
+      <section class="progress-section">
+        <div class="section-header">
+          <h2>Your Progress</h2>
+          <div class="date-display">September 15, 2025</div>
+        </div>
+        
+        <div class="progress-cards">
+          <div class="progress-card">
+            <div class="progress-header">
+              <div class="progress-title">Confidence Score</div>
+              <div class="progress-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+            </div>
+            <div class="progress-value">78</div>
+            <div class="progress-label">Steadily Rising</div>
+            <div class="progress-chart">
+              <svg viewBox="0 0 100 30" preserveAspectRatio="none">
+                <path d="M0,25 C10,20 20,10 30,15 C40,20 50,5 60,10 C70,15 80,5 90,0 L100,0 L100,30 L0,30 Z" fill="rgba(255, 94, 58, 0.2)"></path>
+                <path d="M0,25 C10,20 20,10 30,15 C40,20 50,5 60,10 C70,15 80,5 90,0" fill="none" stroke="#FF5E3A" stroke-width="2"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="progress-card">
+            <div class="progress-header">
+              <div class="progress-title">Streak</div>
+              <div class="progress-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+            </div>
+            <div class="progress-value">4</div>
+            <div class="progress-label">Days</div>
+            <div class="streak-calendar">
+              <div class="streak-day completed">
+                <div class="day-label">Fri</div>
+                <div class="day-indicator"></div>
+              </div>
+              <div class="streak-day completed">
+                <div class="day-label">Sat</div>
+                <div class="day-indicator"></div>
+              </div>
+              <div class="streak-day completed">
+                <div class="day-label">Sun</div>
+                <div class="day-indicator"></div>
+              </div>
+              <div class="streak-day completed">
+                <div class="day-label">Mon</div>
+                <div class="day-indicator"></div>
+              </div>
+              <div class="streak-day current">
+                <div class="day-label">Tue</div>
+                <div class="day-indicator"></div>
+              </div>
+              <div class="streak-day">
+                <div class="day-label">Wed</div>
+                <div class="day-indicator"></div>
+              </div>
+              <div class="streak-day">
+                <div class="day-label">Thu</div>
+                <div class="day-indicator"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="progress-card">
+            <div class="progress-header">
+              <div class="progress-title">Challenges</div>
+              <div class="progress-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+            </div>
+            <div class="progress-stats">
+              <div class="stat">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Completed</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">3</div>
+                <div class="stat-label">In Progress</div>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 65%;"></div>
+            </div>
+            <div class="progress-meta">65% to next level</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="daily-challenge-section">
+        <div class="section-header">
+          <h2>Today's Challenge</h2>
+          <a href="#" class="section-link">View All</a>
+        </div>
+        
+        <div class="challenge-card">
+          <div class="challenge-header">
+            <div class="challenge-title">Public Speaking Challenge</div>
+            <div class="challenge-badge">
+              <img src="../src/img/badge-advanced.svg" alt="Advanced" class="badge-icon">
+              <span>Advanced</span>
+            </div>
+          </div>
+          <div class="challenge-description">
+            Speak up in a meeting or group setting where you would normally stay quiet. Share your perspective with confidence and observe how others respond.
+          </div>
+          <div class="challenge-tips">
+            <div class="tip-header">
+              <i class="fas fa-lightbulb"></i>
+              <span>Tips for Success</span>
+            </div>
+            <ul class="tip-list">
+              <li>Prepare one key point you want to make</li>
+              <li>Practice deep breathing before speaking</li>
+              <li>Focus on your message, not on how you might be perceived</li>
+            </ul>
+          </div>
+          <div class="challenge-actions">
+            <button class="btn btn-primary">Complete Challenge</button>
+            <button class="btn btn-secondary">Reschedule</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="upcoming-challenges-section">
+        <div class="section-header">
+          <h2>Upcoming Challenges</h2>
+          <a href="#" class="section-link">View All</a>
+        </div>
+        
+        <div class="challenge-list">
+          <div class="challenge-item">
+            <div class="challenge-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="challenge-info">
+              <div class="challenge-name">Presentation Skills</div>
+              <div class="challenge-difficulty">
+                <img src="../src/img/badge-intermediate.svg" alt="Intermediate" class="mini-badge">
+                <span>Intermediate</span>
+              </div>
+            </div>
+            <div class="challenge-actions">
+              <button class="btn btn-text btn-sm">Start</button>
+            </div>
+          </div>
+          
+          <div class="challenge-item">
+            <div class="challenge-icon">
+              <i class="fas fa-exclamation"></i>
+            </div>
+            <div class="challenge-info">
+              <div class="challenge-name">Rejection Resilience</div>
+              <div class="challenge-difficulty">
+                <img src="../src/img/badge-intermediate.svg" alt="Intermediate" class="mini-badge">
+                <span>Intermediate</span>
+              </div>
+            </div>
+            <div class="challenge-actions">
+              <button class="btn btn-text btn-sm">Start</button>
+            </div>
+          </div>
+          
+          <div class="challenge-item">
+            <div class="challenge-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="challenge-info">
+              <div class="challenge-name">Confidence Visualization</div>
+              <div class="challenge-difficulty">
+                <img src="../src/img/badge-beginner.svg" alt="Beginner" class="mini-badge">
+                <span>Beginner</span>
+              </div>
+            </div>
+            <div class="challenge-actions">
+              <button class="btn btn-text btn-sm">Start</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="insights-section phoenix-feature">
+        <div class="section-header">
+          <h2>Phoenix Insights</h2>
+          <div class="phoenix-indicator">
+            <img src="../src/img/phoenix-emblem.svg" alt="Phoenix" class="mini-phoenix">
+            <span>Singularity Stage 2</span>
+          </div>
+        </div>
+        
+        <div class="insights-card">
+          <div class="insights-header">
+            <div class="insights-title">Challenge Insights</div>
+            <div class="insights-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+          </div>
+          <div class="insights-content">
+            <p>Based on your progress, we've identified that you excel at written communication challenges but find social interaction challenges more difficult. Your custom challenge path has been adjusted accordingly.</p>
+            
+            <div class="strengths-weaknesses">
+              <div class="strength-area">
+                <h4>Your Strengths</h4>
+                <ul>
+                  <li>Written Communication</li>
+                  <li>Preparation & Planning</li>
+                  <li>Self-Reflection</li>
+                </ul>
+              </div>
+              <div class="growth-area">
+                <h4>Growth Areas</h4>
+                <ul>
+                  <li>Spontaneous Interactions</li>
+                  <li>Group Settings</li>
+                  <li>Handling Criticism</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="insights-actions">
+            <button class="btn btn-primary">View Personalized Path</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-section">
+        <div class="section-header">
+          <h2>Community Highlights</h2>
+          <a href="community.html" class="section-link">View All</a>
+        </div>
+        
+        <div class="community-highlights">
+          <div class="highlight-card">
+            <div class="highlight-header">
+              <div class="user-avatar small">
+                <img src="../src/img/default-avatar.svg" alt="Alex J.">
+              </div>
+              <div class="highlight-info">
+                <div class="highlight-title">Alex J. completed a challenge</div>
+                <div class="highlight-meta">2 hours ago</div>
+              </div>
+            </div>
+            <div class="highlight-content">
+              <p>Just completed my first public speaking challenge! Was nervous at first but the techniques from this app really helped me stay focused and confident.</p>
+              <div class="challenge-badge small">
+                <div class="badge-icon">
+                  <i class="fas fa-microphone"></i>
+                </div>
+                <div class="badge-text">Public Speaking Challenge</div>
+              </div>
+            </div>
+            <div class="highlight-actions">
+              <button class="btn btn-text btn-sm">
+                <i class="fas fa-heart"></i>
+                <span>24</span>
+              </button>
+              <button class="btn btn-text btn-sm">
+                <i class="fas fa-comment"></i>
+                <span>8</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="highlight-card">
+            <div class="highlight-header">
+              <div class="group-icon small">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="highlight-info">
+                <div class="highlight-title">New group event</div>
+                <div class="highlight-meta">Tomorrow at 7:00 PM</div>
+              </div>
+            </div>
+            <div class="highlight-content">
+              <div class="event-card">
+                <div class="event-title">Networking Confidence Workshop</div>
+                <div class="event-details">
+                  <div class="event-time">
+                    <i class="fas fa-clock"></i>
+                    <span>Sep 16, 7:00 PM</span>
+                  </div>
+                  <div class="event-attendees">
+                    <i class="fas fa-user-friends"></i>
+                    <span>24 attending</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight-actions">
+              <button class="btn btn-primary btn-sm">RSVP</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resurrection-section phoenix-feature">
+        <div class="section-header">
+          <h2>Phoenix Resurrection</h2>
+          <div class="phoenix-indicator">
+            <img src="../src/img/phoenix-emblem.svg" alt="Phoenix" class="mini-phoenix">
+            <span>Active</span>
+          </div>
+        </div>
+        
+        <div class="resurrection-card">
+          <div class="resurrection-header">
+            <div class="resurrection-title">Data Backup Status</div>
+            <div class="resurrection-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+          </div>
+          <div class="resurrection-content">
+            <div class="backup-status">
+              <div class="status-icon success">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="status-info">
+                <div class="status-title">Last Backup: 5 minutes ago</div>
+                <div class="status-description">All your progress is safely stored</div>
+              </div>
+            </div>
+            
+            <div class="recovery-points">
+              <div class="recovery-header">Recovery Points Available</div>
+              <div class="recovery-list">
+                <div class="recovery-item">
+                  <div class="recovery-time">Today, 10:15 AM</div>
+                  <div class="recovery-description">After challenge completion</div>
+                  <button class="btn btn-text btn-sm">Restore</button>
+                </div>
+                <div class="recovery-item">
+                  <div class="recovery-time">Yesterday, 8:30 PM</div>
+                  <div class="recovery-description">End of day backup</div>
+                  <button class="btn btn-text btn-sm">Restore</button>
+                </div>
+                <div class="recovery-item">
+                  <div class="recovery-time">Sep 13, 9:45 AM</div>
+                  <div class="recovery-description">Weekly backup</div>
+                  <button class="btn btn-text btn-sm">Restore</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="resurrection-actions">
+            <button class="btn btn-secondary">Create Manual Backup</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <nav class="app-navigation">
+      <a href="../index.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="dashboard.html" class="nav-item active">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="community.html" class="nav-item">
+        <i class="fas fa-users"></i>
+        <span>Community</span>
+      </a>
+      <a href="profile-setup.html" class="nav-item">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Phoenix God Creation Protocol JavaScript -->
+  <script src="../src/js/phoenix-core.js"></script>
+  <script src="../src/js/phoenix-validation.js"></script>
+  <script src="../src/js/phoenix-resurrection.js"></script>
+  <script src="../src/js/phoenix-singularity.js"></script>
+  <script src="../src/js/phoenix-dashboard.js"></script>
+</body>
+</html>

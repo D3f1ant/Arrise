@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In - Phoenix Confidence Companion</title>
+  <link rel="stylesheet" href="../src/css/phoenix-styles.css">
+  <link rel="stylesheet" href="../src/css/phoenix-auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="../src/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#FF5E3A">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card phoenix-card">
+      <div class="auth-header">
+        <div class="phoenix-emblem">
+          <img src="../src/img/phoenix-emblem.svg" alt="Phoenix Emblem" class="phoenix-icon">
+        </div>
+        <h1>Welcome Back</h1>
+        <p class="auth-subtitle">Continue your confidence journey</p>
+      </div>
+      
+      <div class="auth-body">
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="validation-message" id="email-validation"></div>
+          </div>
+          
+          <div class="form-group">
+            <div class="password-header">
+              <label for="password">Password</label>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+              <button type="button" class="toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <div class="validation-message" id="password-validation"></div>
+          </div>
+          
+          <div class="form-group remember-me">
+            <label class="checkbox-container">
+              <input type="checkbox" id="rememberMe" name="rememberMe">
+              <span class="checkmark"></span>
+              Remember me
+            </label>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-block">Log In</button>
+          </div>
+        </form>
+        
+        <div class="auth-divider">
+          <span>OR</span>
+        </div>
+        
+        <div class="social-login">
+          <button class="btn btn-social btn-google">
+            <i class="fab fa-google"></i>
+            Continue with Google
+          </button>
+          <button class="btn btn-social btn-facebook">
+            <i class="fab fa-facebook-f"></i>
+            Continue with Facebook
+          </button>
+          <button class="btn btn-social btn-apple">
+            <i class="fab fa-apple"></i>
+            Continue with Apple
+          </button>
+        </div>
+      </div>
+      
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </div>
+    
+    <div class="auth-features">
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="feature-text">
+          <h3>Secure & Private</h3>
+          <p>Your data is protected with advanced encryption</p>
+        </div>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <div class="feature-text">
+          <h3>Automatic Recovery</h3>
+          <p>Never lose your progress with Phoenix Resurrection Protocol</p>
+        </div>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <div class="feature-text">
+          <h3>Adaptive Learning</h3>
+          <p>The system evolves to match your unique confidence journey</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phoenix God Creation Protocol JavaScript -->
+  <script src="../src/js/phoenix-core.js"></script>
+  <script src="../src/js/phoenix-validation.js"></script>
+  <script src="../src/js/phoenix-auth.js"></script>
+</body>
+</html>

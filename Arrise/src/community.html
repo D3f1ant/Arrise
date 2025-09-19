@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community - Phoenix Confidence Companion</title>
+  <link rel="stylesheet" href="../src/css/phoenix-styles.css">
+  <link rel="stylesheet" href="../src/css/phoenix-community.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="../src/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#FF5E3A">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <div class="community-container phoenix-container">
+    <header class="app-header">
+      <div class="header-left">
+        <a href="../index.html" class="back-link">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <div class="header-title">Community</div>
+      </div>
+      <div class="header-right">
+        <button class="icon-button notifications-button">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">3</span>
+        </button>
+        <div class="user-avatar">
+          <img src="../src/img/default-avatar.svg" alt="User Avatar">
+        </div>
+      </div>
+    </header>
+
+    <div class="community-tabs">
+      <div class="tab active" data-tab="feed">
+        <i class="fas fa-stream"></i>
+        <span>Feed</span>
+      </div>
+      <div class="tab" data-tab="friends">
+        <i class="fas fa-user-friends"></i>
+        <span>Friends</span>
+      </div>
+      <div class="tab" data-tab="groups">
+        <i class="fas fa-users"></i>
+        <span>Groups</span>
+      </div>
+      <div class="tab" data-tab="discover">
+        <i class="fas fa-compass"></i>
+        <span>Discover</span>
+      </div>
+    </div>
+
+    <!-- Feed Tab Content -->
+    <div class="tab-content active" id="feed-content">
+      <div class="post-composer">
+        <div class="composer-header">
+          <div class="user-avatar small">
+            <img src="../src/img/default-avatar.svg" alt="User Avatar">
+          </div>
+          <div class="composer-input" contenteditable="true" data-placeholder="Share your confidence journey..."></div>
+        </div>
+        <div class="composer-footer">
+          <div class="composer-actions">
+            <button class="composer-action">
+              <i class="fas fa-image"></i>
+            </button>
+            <button class="composer-action">
+              <i class="fas fa-poll"></i>
+            </button>
+            <button class="composer-action">
+              <i class="fas fa-trophy"></i>
+            </button>
+          </div>
+          <button class="btn btn-primary btn-sm">Post</button>
+        </div>
+      </div>
+
+      <div class="feed-filters">
+        <div class="filter active">All</div>
+        <div class="filter">Friends</div>
+        <div class="filter">Groups</div>
+        <div class="filter">Challenges</div>
+      </div>
+
+      <div class="community-posts">
+        <div class="community-post">
+          <div class="post-header">
+            <div class="post-user">
+              <div class="user-avatar small">
+                <img src="../src/img/default-avatar.svg" alt="Alex J.">
+              </div>
+              <div class="user-info">
+                <div class="user-name">Alex J.</div>
+                <div class="post-meta">2 hours ago</div>
+              </div>
+            </div>
+            <div class="post-options">
+              <button class="icon-button">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>Just completed my first public speaking challenge! Was nervous at first but the techniques from this app really helped me stay focused and confident.</p>
+            <div class="challenge-badge">
+              <div class="badge-icon">
+                <i class="fas fa-microphone"></i>
+              </div>
+              <div class="badge-text">Public Speaking Challenge</div>
+            </div>
+          </div>
+          <div class="post-actions">
+            <button class="post-action">
+              <i class="fas fa-heart"></i>
+              <span>24</span>
+            </button>
+            <button class="post-action">
+              <i class="fas fa-comment"></i>
+              <span>8</span>
+            </button>
+            <button class="post-action">
+              <i class="fas fa-share"></i>
+            </button>
+          </div>
+          <div class="post-comments">
+            <div class="comment">
+              <div class="user-avatar extra-small">
+                <img src="../src/img/default-avatar.svg" alt="Jamie S.">
+              </div>
+              <div class="comment-content">
+                <div class="comment-user">Jamie S.</div>
+                <div class="comment-text">Congrats! What techniques worked best for you?</div>
+                <div class="comment-actions">
+                  <span class="comment-time">1 hour ago</span>
+                  <button class="comment-action">Like</button>
+                  <button class="comment-action">Reply</button>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="user-avatar extra-small">
+                <img src="../src/img/default-avatar.svg" alt="Alex J.">
+              </div>
+              <div class="comment-content">
+                <div class="comment-user">Alex J.</div>
+                <div class="comment-text">The 4-7-8 breathing technique and focusing on one friendly face at a time!</div>
+                <div class="comment-actions">
+                  <span class="comment-time">45 minutes ago</span>
+                  <button class="comment-action">Like</button>
+                  <button class="comment-action">Reply</button>
+                </div>
+              </div>
+            </div>
+            <div class="add-comment">
+              <div class="user-avatar extra-small">
+                <img src="../src/img/default-avatar.svg" alt="User Avatar">
+              </div>
+              <div class="comment-input" contenteditable="true" data-placeholder="Write a comment..."></div>
+              <button class="icon-button send-button">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="community-post">
+          <div class="post-header">
+            <div class="post-user">
+              <div class="user-avatar small">
+                <img src="../src/img/default-avatar.svg" alt="Taylor M.">
+              </div>
+              <div class="user-info">
+                <div class="user-name">Taylor M.</div>
+                <div class="post-meta">Yesterday</div>
+              </div>
+            </div>
+            <div class="post-options">
+              <button class="icon-button">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>Hit a 30-day streak today! The daily visualization exercises have completely changed how I approach challenging situations at work. Anyone else finding the breathing techniques helpful?</p>
+            <div class="milestone-badge">
+              <div class="badge-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <div class="badge-text">30-Day Streak</div>
+            </div>
+          </div>
+          <div class="post-actions">
+            <button class="post-action">
+              <i class="fas fa-heart"></i>
+              <span>42</span>
+            </button>
+            <button class="post-action">
+              <i class="fas fa-comment"></i>
+              <span>15</span>
+            </button>
+            <button class="post-action">
+              <i class="fas fa-share"></i>
+            </button>
+          </div>
+          <div class="post-comments collapsed">
+            <button class="view-comments">
+              View all 15 comments
+            </button>
+          </div>
+        </div>
+
+        <div class="community-post phoenix-feature">
+          <div class="post-header">
+            <div class="post-user">
+              <div class="user-avatar small phoenix-avatar">
+                <img src="../src/img/phoenix-emblem.svg" alt="Phoenix Guide">
+              </div>
+              <div class="user-info">
+                <div class="user-name">Phoenix Guide</div>
+                <div class="post-meta">Personalized</div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>Based on your recent activity, you might connect well with the "Professional Confidence" group. They focus on workplace confidence challenges similar to ones you've completed.</p>
+            <div class="recommendation-card">
+              <div class="recommendation-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="recommendation-info">
+                <div class="recommendation-title">Professional Confidence</div>
+                <div class="recommendation-meta">1,245 members · 32 active today</div>
+              </div>
+            </div>
+          </div>
+          <div class="post-actions">
+            <button class="btn btn-primary">Join Group</button>
+            <button class="btn btn-text">Not Interested</button>
+          </div>
+        </div>
+
+        <div class="community-post">
+          <div class="post-header">
+            <div class="post-user">
+              <div class="user-avatar small">
+                <img src="../src/img/default-avatar.svg" alt="Jordan P.">
+              </div>
+              <div class="user-info">
+                <div class="user-name">Jordan P.</div>
+                <div class="post-meta">2 days ago</div>
+              </div>
+            </div>
+            <div class="post-options">
+              <button class="icon-button">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>The rejection challenge was tough but eye-opening! Got turned down for 3 requests today but each one got easier. Highly recommend pushing through the discomfort.</p>
+            <div class="challenge-badge">
+              <div class="badge-icon">
+                <i class="fas fa-exclamation"></i>
+              </div>
+              <div class="badge-text">Rejection Resilience Challenge</div>
+            </div>
+          </div>
+          <div class="post-actions">
+            <button class="post-action">
+              <i class="fas fa-heart"></i>
+              <span>37</span>
+            </button>
+            <button class="post-action">
+              <i class="fas fa-comment"></i>
+              <span>12</span>
+            </button>
+            <button class="post-action">
+              <i class="fas fa-share"></i>
+            </button>
+          </div>
+          <div class="post-comments collapsed">
+            <button class="view-comments">
+              View all 12 comments
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Friends Tab Content -->
+    <div class="tab-content" id="friends-content">
+      <div class="friends-header">
+        <h2>Friends</h2>
+        <div class="friends-actions">
+          <button class="btn btn-primary btn-sm">
+            <i class="fas fa-user-plus"></i>
+            Add Friends
+          </button>
+          <button class="icon-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="friend-requests">
+        <h3>Friend Requests</h3>
+        <div class="request-list">
+          <div class="friend-request">
+            <div class="request-user">
+              <div class="user-avatar small">
+                <img src="../src/img/default-avatar.svg" alt="Chris M.">
+              </div>
+              <div class="user-info">
+                <div class="user-name">Chris M.</div>
+                <div class="user-meta">3 mutual friends</div>
+              </div>
+            </div>
+            <div class="request-actions">
+              <button class="btn btn-primary btn-sm">Accept</button>
+              <button class="btn btn-text btn-sm">Decline</button>
+            </div>
+          </div>
+          <div class="friend-request">
+            <div class="request-user">
+              <div class="user-avatar small">
+                <img src="../src/img/default-avatar.svg" alt="Sam T.">
+              </div>
+              <div class="user-info">
+                <div class="user-name">Sam T.</div>
+                <div class="user-meta">1 mutual friend</div>
+              </div>
+            </div>
+            <div class="request-actions">
+              <button class="btn btn-primary btn-sm">Accept</button>
+              <button class="btn btn-text btn-sm">Decline</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="friends-list">
+        <h3>Your Friends</h3>
+        <div class="friends-filter">
+          <div class="filter active">All</div>
+          <div class="filter">Recently Active</div>
+          <div class="filter">New</div>
+        </div>
+        
+        <div class="friend-items">
+          <div class="friend-item">
+            <div class="friend-avatar">
+              <img src="../src/img/default-avatar.svg" alt="Alex J.">
+              <div class="online-indicator"></div>
+            </div>
+            <div class="friend-info">
+              <div class="friend-name">Alex J.</div>
+              <div class="friend-meta">Online</div>
+            </div>
+            <div class="friend-actions">
+              <button class="icon-button">
+                <i class="fas fa-comment"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="friend-item">
+            <div class="friend-avatar">
+              <img src="../src/img/default-avatar.svg" alt="Taylor M.">
+            </div>
+            <div class="friend-info">
+              <div class="friend-name">Taylor M.</div>
+              <div class="friend-meta">2 hours ago</div>
+            </div>
+            <div class="friend-actions">
+              <button class="icon-button">
+                <i class="fas fa-comment"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="friend-item">
+            <div class="friend-avatar">
+              <img src="../src/img/default-avatar.svg" alt="Jordan P.">
+              <div class="online-indicator"></div>
+            </div>
+            <div class="friend-info">
+              <div class="friend-name">Jordan P.</div>
+              <div class="friend-meta">Online</div>
+            </div>
+            <div class="friend-actions">
+              <button class="icon-button">
+                <i class="fas fa-comment"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="friend-item">
+            <div class="friend-avatar">
+              <img src="../src/img/default-avatar.svg" alt="Jamie S.">
+            </div>
+            <div class="friend-info">
+              <div class="friend-name">Jamie S.</div>
+              <div class="friend-meta">Yesterday</div>
+            </div>
+            <div class="friend-actions">
+              <button class="icon-button">
+                <i class="fas fa-comment"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="friend-item">
+            <div class="friend-avatar">
+              <img src="../src/img/default-avatar.svg" alt="Morgan L.">
+            </div>
+            <div class="friend-info">
+              <div class="friend-name">Morgan L.</div>
+              <div class="friend-meta">3 days ago</div>
+            </div>
+            <div class="friend-actions">
+              <button class="icon-button">
+                <i class="fas fa-comment"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Groups Tab Content -->
+    <div class="tab-content" id="groups-content">
+      <div class="groups-header">
+        <h2>Groups</h2>
+        <div class="groups-actions">
+          <button class="btn btn-primary btn-sm">
+            <i class="fas fa-plus"></i>
+            Create Group
+          </button>
+          <button class="icon-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="groups-filter">
+        <div class="filter active">Your Groups</div>
+        <div class="filter">Discover</div>
+        <div class="filter">Invites</div>
+      </div>
+
+      <div class="groups-list">
+        <div class="group-card">
+          <div class="group-header">
+            <div class="group-icon">
+              <i class="fas fa-microphone"></i>
+            </div>
+            <div class="group-info">
+              <div class="group-name">Public Speaking Masters</div>
+              <div class="group-meta">1,842 members · 56 active today</div>
+            </div>
+          </div>
+          <div class="group-activity">
+            <div class="activity-icon">
+              <i class="fas fa-comment-alt"></i>
+            </div>
+            <div class="activity-text">
+              <strong>New discussion:</strong> "How to handle Q&A sessions"
+            </div>
+          </div>
+          <div class="group-actions">
+            <button class="btn btn-secondary btn-sm">View Group</button>
+          </div>
+        </div>
+
+        <div class="group-card">
+          <div class="group-header">
+            <div class="group-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="group-info">
+              <div class="group-name">Professional Confidence</div>
+              <div class="group-meta">1,245 members · 32 active today</div>
+            </div>
+          </div>
+          <div class="group-activity">
+            <div class="activity-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="activity-text">
+              <strong>Upcoming event:</strong> "Networking Confidence Workshop"
+            </div>
+          </div>
+          <div class="group-actions">
+            <button class="btn btn-secondary btn-sm">View Group</button>
+          </div>
+        </div>
+
+        <div class="group-card">
+          <div class="group-header">
+            <div class="group-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="group-info">
+              <div class="group-name">Dating & Relationship Confidence</div>
+              <div class="group-meta">978 members · 24 active today</div>
+            </div>
+          </div>
+          <div class="group-activity">
+            <div class="activity-icon">
+              <i class="fas fa-poll"></i>
+            </div>
+            <div class="activity-text">
+              <strong>New poll:</strong> "What's your biggest dating fear?"
+            </div>
+          </div>
+          <div class="group-actions">
+            <button class="btn btn-secondary btn-sm">View Group</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Discover Tab Content -->
+    <div class="tab-content" id="discover-content">
+      <div class="discover-header">
+        <h2>Discover</h2>
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search people, groups, challenges...">
+        </div>
+      </div>
+
+      <div class="discover-section">
+        <div class="section-header">
+          <h3>Suggested Friends</h3>
+          <a href="#" class="section-link">See All</a>
+        </div>
+        <div class="suggested-friends">
+          <div class="suggestion-card">
+            <div class="suggestion-avatar">
+              <img src="../src/img/default-avatar.svg" alt="Riley J.">
+            </div>
+            <div class="suggestion-info">
+              <div class="suggestion-name">Riley J.</div>
+              <div class="suggestion-meta">4 mutual friends</div>
+            </div>
+            <div class="suggestion-actions">
+              <button class="btn btn-primary btn-sm">Connect</button>
+            </div>
+          </div>
+          
+          <div class="suggestion-card">
+            <div class="suggestion-avatar">
+              <img src="../src/img/default-avatar.svg" alt="Casey P.">
+            </div>
+            <div class="suggestion-info">
+              <div class="suggestion-name">Casey P.</div>
+              <div class="suggestion-meta">2 mutual friends</div>
+            </div>
+            <div class="suggestion-actions">
+              <button class="btn btn-primary btn-sm">Connect</button>
+            </div>
+          </div>
+          
+          <div class="suggestion-card">
+            <div class="suggestion-avatar">
+              <img src="../src/img/default-avatar.svg" alt="Avery M.">
+            </div>
+            <div class="suggestion-info">
+              <div class="suggestion-name">Avery M.</div>
+              <div class="suggestion-meta">1 mutual friend</div>
+            </div>
+            <div class="suggestion-actions">
+              <button class="btn btn-primary btn-sm">Connect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="discover-section">
+        <div class="section-header">
+          <h3>Popular Groups</h3>
+          <a href="#" class="section-link">See All</a>
+        </div>
+        <div class="popular-groups">
+          <div class="group-card">
+            <div class="group-header">
+              <div class="group-icon">
+                <i class="fas fa-crown"></i>
+              </div>
+              <div class="group-info">
+                <div class="group-name">Leadership Confidence</div>
+                <div class="group-meta">2,156 members · 78 active today</div>
+              </div>
+            </div>
+            <div class="group-description">
+              For those looking to build confidence in leadership roles and develop executive presence.
+            </div>
+            <div class="group-actions">
+              <button class="btn btn-primary btn-sm">Join Group</button>
+            </div>
+          </div>
+          
+          <div class="group-card">
+            <div class="group-header">
+              <div class="group-icon">
+                <i class="fas fa-comment"></i>
+              </div>
+              <div class="group-info">
+                <div class="group-name">Social Confidence</div>
+                <div class="group-meta">1,879 members · 64 active today</div>
+              </div>
+            </div>
+            <div class="group-description">
+              Overcome social anxiety and build confidence in everyday interactions and conversations.
+            </div>
+            <div class="group-actions">
+              <button class="btn btn-primary btn-sm">Join Group</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="discover-section phoenix-feature">
+        <div class="section-header">
+          <h3>Personalized Recommendations</h3>
+        </div>
+        <div class="recommendation-message">
+          <div class="recommendation-icon">
+            <img src="../src/img/phoenix-emblem.svg" alt="Phoenix Emblem" class="phoenix-icon">
+          </div>
+          <div class="recommendation-text">
+            Based on your goals and activity, we've found these matches for you:
+          </div>
+        </div>
+        <div class="personalized-recommendations">
+          <div class="recommendation-card">
+            <div class="recommendation-type">Challenge Group</div>
+            <div class="recommendation-header">
+              <div class="recommendation-icon">
+                <i class="fas fa-microphone"></i>
+              </div>
+              <div class="recommendation-info">
+                <div class="recommendation-title">30-Day Speaking Challenge</div>
+                <div class="recommendation-meta">342 participants · Starts in 2 days</div>
+              </div>
+            </div>
+            <div class="recommendation-description">
+              A month-long challenge with daily speaking exercises to build confidence gradually.
+            </div>
+            <div class="recommendation-actions">
+              <button class="btn btn-primary btn-sm">Join Challenge</button>
+            </div>
+          </div>
+          
+          <div class="recommendation-card">
+            <div class="recommendation-type">Mentor</div>
+            <div class="recommendation-header">
+              <div class="recommendation-avatar">
+                <img src="../src/img/default-avatar.svg" alt="Dr. Morgan J.">
+              </div>
+              <div class="recommendation-info">
+                <div class="recommendation-title">Dr. Morgan J.</div>
+                <div class="recommendation-meta">Communication Expert · 4.9 ★</div>
+              </div>
+            </div>
+            <div class="recommendation-description">
+              Specializes in helping professionals overcome public speaking anxiety.
+            </div>
+            <div class="recommendation-actions">
+              <button class="btn btn-primary btn-sm">Connect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="app-navigation">
+      <a href="../index.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="dashboard.html" class="nav-item">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="community.html" class="nav-item active">
+        <i class="fas fa-users"></i>
+        <span>Community</span>
+      </a>
+      <a href="profile-setup.html" class="nav-item">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Phoenix God Creation Protocol JavaScript -->
+  <script src="../src/js/phoenix-core.js"></script>
+  <script src="../src/js/phoenix-validation.js"></script>
+  <script src="../src/js/phoenix-community.js"></script>
+</body>
+</html>
